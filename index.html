@@ -4,14 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guessing Game</title>
+    <title>Number Game</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css"
+        integrity="sha384-Bk5cbLkZQ5raZ0+H2/+VbfYx3WpvxvQK4zqXZr7sYODuaX7bKXoSOnipQxkaS8sv" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <script src="/js/script.js"></script>
+    <div class="vertainer w-100 vh-100 gradient-bg">
+        <div class="vertainer soft-card w-75 p-4 mb-4">
+            <h1 class="fw-bold">Number Guessing Game</h1>
+            <h4><i id="btn_info" class="bi bi-arrow-right-circle d-inline-block"></i> istruzioni</h4>
+            <p id="p_info" class="hidden">Istruzioni</p>
+            <button id="btn_play" class="btn btn-primary">Gioca</button>
+        </div>
+
+        <div id="div_error"></div>
+        <div id="div_game" class="vertainer soft-card p-4 hidden w-75">
+
+            <div class="input-group mb-3 w-75">
+                <input id="input_number" type="text" class="form-control" placeholder="Numero qui">
+                <button id="btn_send" class="btn btn-info" type="button">Invia</button>
+            </div>
+
+            <div class="row mt-3 w-100">
+                <div class="col-md-4 p-2">
+                    <h3>Tentativi Rimasti</h3>
+                    <i class="bi bi-joystick fs-1"></i>
+                    <p id="lifes_display">...</p>
+                </div>
+                <div class="col-md-4 p-2">
+                    <h3>suggerimenti</h3>
+                    <i class="bi bi-info-square fs-1"></i>
+                    <p id="hint_display">...</p>
+                </div>
+                <div class="col-md-4 p-2">
+                    <h3>Numeri inseriti</h3>
+                    <i class="bi bi-pencil-square fs-1"></i>
+                    <p id="history_display">...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
